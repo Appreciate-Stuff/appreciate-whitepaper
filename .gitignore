@@ -20,3 +20,4 @@
 # *.ps
 # *.eps
 *.DS_Store*
+*synctex.gz

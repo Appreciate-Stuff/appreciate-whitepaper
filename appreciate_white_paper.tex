@@ -49,14 +49,10 @@ citecolor=gray]{hyperref}
 \title{%
 	\textbf{appreciate} \\
 	\large Digital Ownership Enabled Utility  \\
-	\small v0.9
+	\scriptsize v0.9.1 
 }
-
-\author{\scriptsize{McEntire Jeremy, Waterland Moriah, Trivieri Kayla, Braithwaite Z,  Connor  Justin}}
-
-\date{October 1, 2022}
-
-
+\author{\scriptsize{ Jeremy McEntire, Moriah Waterland , Kayla Trivieri, Z Braithwaite , Devon Stewart ,  Justin Connor }}
+\date{\normalsize{October 1, 2022}}
 
 \begin{document}
 	%\setlength{\parindent}{0pt}
@@ -65,9 +61,14 @@ citecolor=gray]{hyperref}
 	
 	
 	
-	\abstract{appreciate is building a digital Proof of Ownership ecosystem. Our platform ingests moments of Item purchase, in the form of transaction receipts, and creates Proof of Purchase (PoP) Credentials. PoP Credentials are Verifiable Credentials (VCs) that digitally link Item and Owner using the Owner’s Decentralized Identifier (DiD). PoP Credentials establish the Item’s chain of custody and absorb Item use metadata. These interactions exist as primitives in the appreciate ecosystem, a secure-by-design architecture which iterates on conventional Service Oriented Architecture (SOA) solutions by hosting logic inside a controlled environment rich with data and other constructs. The ecosystem is constructed such that partners can focus on delivering utility services to Owners. Proof of Ownership (POwn), our core primitive, is only required when an Owner requests access to a service. In fact, service providers may embed Proof of Ownership requirements directly in their services. To access services, Owners action a PoP to ‘confirm’ POwn. This confirmation comes in the form of a McEntire Score (M Score): a proprietary assessment of factors to determine appreciate’s confidence in a PoP holder’s possession of the associated Item. PoP and M Score define whether POwn is confirmed or requires more evidence.  As the ecosystem expands, we intend to capture PoP and M Score as on-chain Item Tokens (dynamic NFTs) and to enable commerce denominated in the appreciate fungible token.  appreciate has no consumers or users, only Owners. We look forward to contributing to the Owner Economy.
-	}
-
+	\begin{tcolorbox}[colback=gray!5!white,colframe=gray!50!black, boxed title style={empty, size=minimal, bottom=1.5mm}]
+		  
+		
+			\abstract{appreciate is building a digital Proof of Ownership ecosystem. Our platform ingests moments of Item purchase, in the form of transaction receipts, and creates Proof of Purchase (PoP) Credentials. PoP Credentials are Verifiable Credentials (VCs) that digitally link Item and Owner using the Owner’s Decentralized Identifier (DiD). PoP Credentials establish the Item’s chain of custody and absorb Item use metadata. These interactions exist as primitives in the appreciate ecosystem, a secure-by-design architecture which iterates on conventional Service Oriented Architecture (SOA) solutions by hosting logic inside a controlled environment rich with data and other constructs. The ecosystem is constructed such that partners can focus on delivering utility services to Owners. Proof of Ownership (POwn), our core primitive, is only required when an Owner requests access to a service. In fact, service providers may embed Proof of Ownership requirements directly in their services. To access services, Owners action a PoP to ‘confirm’ POwn. This confirmation comes in the form of a McEntire Score (M Score): a proprietary assessment of factors to determine appreciate’s confidence in a PoP holder’s possession of the associated Item. PoP and M Score define whether POwn is confirmed or requires more evidence.  As the ecosystem expands, we intend to capture PoP and M Score as on-chain Item Tokens (dynamic NFTs) and to enable commerce denominated in the appreciate fungible token.  appreciate has no consumers or users, only Owners. We look forward to contributing to the Owner Economy.
+		}
+	\end{tcolorbox}
+	
+	
 \tableofcontents
 
 	
@@ -76,12 +77,7 @@ citecolor=gray]{hyperref}
 	%\doublespacing
 \section {Introduction}
 
-300 billion receipts per year $\rightarrow$ humanity tracks our Item transactions through this mess of plastic, paper, and server space.  Each time an Item is transferred to an Owner, we humans generate unnecessary waste (annually 4 billion pounds of $CO_2 $ and 302 million pounds of solid waste\cite{envimp}). In addition to their wastefulness, receipts are analog in a digital world. They don’t enable digital ownership: no chain of custody, and no Item-related utility.
-The appreciate team is obsessed with Extensible Ownership: physical Items enhanced with chains of custody and/or digital twins. Extensible Ownership enables seamless utility -- doing stuff with stuff.  Currently, humans do plenty of stuff with stuff: we finance it, insure it, resell it, customize it. Yet, this utility is far from seamless, often siloed, and is only a small sample of the utility enabled by Extensible Ownership.
-
-
-
-
+300 billion receipts per year -- humanity tracks our Item transactions through this mess of plastic, paper, and server space.  Each time an Item is transferred to an Owner, we humans generate unnecessary waste (annually 4 billion pounds of $CO_2 $ and 302 million pounds of solid waste\cite{envimp}). In addition to their wastefulness, receipts are analog in a digital world. They don’t enable digital ownership: no chain of custody, and no Item-related utility.
 
 Item related utility, the ability to do stuff with stuff, is a hard problem to solve. Enabling Item related utility requires an ecosystem with the following elements:
 \begin{enumerate}
@@ -93,15 +89,14 @@ Item related utility, the ability to do stuff with stuff, is a hard problem to s
 
 Each of these features is complex, and each is not valuable without the others. When building an ecosystem to solve the Item related utility problem, we considered one principle as paramount: seamlessness. Without automated onboarding and simple utility, Owners would not enter the ecosystem, let alone take action in it. Deciding on receipts as our input guarantees scale. Automated ingestion of receipts make it easy for Owners to engage with appreciate, and immediate utility increases the value of their engagement. All of this is our effort to create a new Owner Economy, powered by Extensible Ownership.
 
-The appreciate team is obsessed with Extensible Ownership: physical Items enhanced with chains of custody and/or digital twins. Extensible Ownership enables seamless utility -- doing stuff with stuff. Currently, humans do plenty of stuff with stuff: we finance it, insure it, resell it, customize it. Yet, this utility is far from seamless, often siloed, and is only a small sample of the utility enabled by Extensible Ownership. 
+The appreciate team is obsessed with Extensible Ownership: physical Items enhanced with chains of custody and/or digital twins. Extensible Ownership enables seamless utility -- doing stuff with stuff. 
+Currently, humans do plenty of stuff with stuff: we finance it, insure it, resell it, customize it. 
+Yet, this utility is far from seamless, often siloed, and is only a small sample of the utility enabled by Extensible Ownership. 
 
 Empowering Owners in a secured and trusted manner is at the core of our values. The appreciate ecosystem addresses the three fundamental principles in cybersecurity, known as the CIA triad: confidentiality, integrity, and availability. 
 Traditional web1/web2 products are rarely able to address all three, creating vulnerabilities and exposing users to potential risk. 
-appreciate’s design solves this problem using a data transport structure (cryptogram) that optimizes CIA control settings at each point of transit, computation, or storage. The secure-by-design approach facilitates integrations with partners making data available for delivering Owner utility. 
-
-Our approach to security, human-centered design, and interoperability redefines the membrane between all digital and physical items, transforming the ownership experience. appreciate is the future of Ownership.  
-
-
+appreciate’s design solves this problem using a data transport structure (cryptogram) that optimizes CIA control settings at each point of transit, computation, or storage. 
+The secure-by-design approach facilitates integrations with partners making data available for delivering Owner utility. 
 
 \begin{figure*}[]
 	\centering %trim=left botm right top
@@ -111,6 +106,12 @@ Our approach to security, human-centered design, and interoperability redefines 
 	\caption{From Receipt Ingestion to Extensible Ownership and Utility  }
 	\label{fig: flowchart}
 \end{figure*}
+
+Our approach to security, human-centered design, and interoperability redefines the membrane between all digital and physical items, transforming the ownership experience (See \(Fig.~\ref{fig: flowchart}.\)).
+appreciate is the future of Ownership.  
+
+
+
 
 \section {appreciate Concepts}
 
@@ -207,7 +208,7 @@ In the future, Owners may request an on-chain Item Token to represent their Item
 \section{appreciate Architecture}
 
 \subsection{Design Considerations}
-Leading industry practices utilize disparate solutions for addressing challenges in the information security triad (CIA: confidentiality, integrity, and availability) but lack comprehensive solutions that allow discrete calibration of the individual elements. Current solutions should also accommodate Zooko’s trilemma8 including namespaces that are Human-Meaningful, Secure, and Decentralized.
+Leading industry practices utilize disparate solutions for addressing challenges in the information security triad (CIA: confidentiality, integrity, and availability) but lack comprehensive solutions that allow discrete calibration of the individual elements. Current solutions should also accommodate Zooko’s trilemma\cite{zooko} including namespaces that are Human-Meaningful, Secure, and Decentralized.
 
 The appreciate ecosystem is an adaptive, automatically-scalable architecture that invokes and calibrates platform controls for support in accordance with service needs in availability, integrity, and confidentiality. In a single system, appreciate addresses all three pillars of the Zooko Wilcox-O'Hearn conjecture through:
 
@@ -303,7 +304,7 @@ For appreciate’s initial set of service providers, see Appendix.~\ref{app: nam
 \subsection{Cryptograms}
 A Cryptogram is a stateful, secure, routable structure that enables end-to-end encrypted communication throughout the appreciate ecosystem. Data is encrypted at the source, passed through the system, and decrypted on-demand by those entities with the appropriate keys. Following the principle of least privilege, decryption is handled for each service by a sidecar which is supplied with only the necessary decryption keys defined by the Service Registry.
 
-Cryptograms allow for mediation between Owners and service providers, while maintaining data sovereignty for both parties.This means that the system, by design, can support services that manage their own encryption. In all cases, the Service Registry shares public keys for encryption. In the typical workflow, the system seeds the appropriate private keys onto a sidecar during service instantiation. Optionally, to support more secure communication to a service, the service owner may supply their own private key in the service logic by encapsulating it in the system image. An Integration API allows external service providers to register, submit, and update an application image and its keys for their implemented service.
+Cryptograms allow for mediation between Owners and service providers, while maintaining data sovereignty for both parties.This means that the system, by design, can support services that manage their own encryption. In all cases, the Service Registry shares public keys for encryption. In the typical workflow, the system seeds the appropriate private keys onto a sidecar during service instantiation. Optionally, to support more secure communication to a service, the service owner may supply their own private key in the service logic by encapsulating it in the system image. An Integration API allows external service providers to register, submit, and update an application image and its keys for their implemented service (See Fig.~\ref{fig: infraint}).
 
 A Cryptogram is created with a sequence of services that the Owner intends to leverage, as well as with the data required by those services. Both the Cryptogram’s list of services and the data components are encrypted for their intended recipients (e.g., a service, the system’s control plane, or the client).
 
@@ -314,9 +315,8 @@ The Cryptogram protocol enforces additive-only modifications, requiring all inse
 
 The Service Registry contains the definition and mapping of interfaces to concrete service implementations. Multiple services may exist for the same interface. Cryptograms may request either a specific service (implementation) of an interface or simply request ANY service that implements that interface, at which point the system will choose an appropriate service for the client.
 
-An associated Key Vault, an independent system responsible for managing keys within the appreciate ecosystem, contains encrypted copies of the deployment keys for the registered services to enable them to bootstrap without leaking sensitive data. The Service Registry and associated Key Vault will be highly accessible as well as stored on-chain using a distributed filesystem (e.g. Ethereum with IPFS).  See Fig.~\ref{fig: infraint}
+An associated Key Vault, an independent system responsible for managing keys within the appreciate ecosystem, contains encrypted copies of the deployment keys for the registered services to enable them to bootstrap without leaking sensitive data. The Service Registry and associated Key Vault will be highly accessible as well as stored on-chain using a distributed filesystem (e.g. Ethereum with IPFS\cite{ipfs}).
 
-alterations to service interfaces are planned.
 
 \begin{figure*}[b]
 	\centering %trim=left botm right top
@@ -386,7 +386,7 @@ Currently most NFTs are static and are immutable with fixed metadata. By issuing
 \newpage
 \appendix
 \section{Services Appendix} \label{app: name}
-	\begin{tabular}{|p{0.25\textwidth}|p{0.63\textwidth}|}
+	\begin{tabular}{|p{0.27\textwidth}|p{0.63\textwidth}|}
 	\hline
 	\textbf{Ownership Services} & \textbf{Description}\\
 	\hline
@@ -412,7 +412,7 @@ Currently most NFTs are static and are immutable with fixed metadata. By issuing
 		A transaction signer with elevated security will enable approval of custodial wallet transactions.
 		Some of the supported blockchains also will include services to monitor transactions (potentially enable recovery for a stuck transaction)
 		Additionally, a distributed file system gateway supports interoperability with distributed file systems, including support for long-term persistence (e.g., IPFS with Infura)
-		NFT managers mint and verify NFTs on specific blockchains(i.e. mint Ethereum non-fungible tokens (NFT)\cite{nfts})\\
+		NFT managers mint and verify NFTs on specific blockchains(i.e. mint Ethereum non-fungible tokens (NFT)\cite{eth1155})\\
 		\hline
 \end{tabular}
 
@@ -422,23 +422,33 @@ Currently most NFTs are static and are immutable with fixed metadata. By issuing
 	 
 	\bibitem{envimp}
 	Environmental Impact of Receipts https://www.greenamerica.org/sites/default/files/2019-06/Green America’s Skip The Slip Report.pdf 
-	\bibitem{verifiablecred}
-	Verifiable Credentials Data Model(VC) https://www.w3.org/TR/2022/REC-vc-data-model-20220303/
-	\bibitem{securecomp}
-	Bell, David Elliott \& LaPadula, Leonard J. (1973). "Secure Computer Systems: Mathematical Foundations" (PDF). MITRE Corporation. Archived from the original (PDF) on 2006-06-18. Retrieved 2006-04-20.
+	
+
+	
+	\bibitem{zooko}
+	Bob Wyman, “The Persistence of Identity (Updating Zooko's Pyramid)” \_As I May Think…\_ 30 Dec 2016. \url{https://web.archive.org/web/20160331154849/https://wyman.us/main/2006/12/the_persistence.html}	
+	
 	\bibitem{biba}
 	Biba, K. J. "Integrity Considerations for Secure Computer Systems", MTR-3153, The Mitre Corporation, June 1975.
-	\bibitem{modernapparch}
-	Modern App Architecture for the Enterprise \\
-	\url{https://www.docker.com/wp-content/uploads/2022/03/caaSwhitepaper_V6_0.pdf}
-	\bibitem{eth1155}
-	Ethereum ERC-1155 Multi-Token Standard \\ \url{https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/}
+	
+	\bibitem{securecomp}
+	Bell, David Elliott \& LaPadula, Leonard J. (1973). "Secure Computer Systems: Mathematical Foundations" (PDF). MITRE Corporation. Archived from the original (PDF) on 2006-06-18. Retrieved 2006-04-20.
+	
 	\bibitem{nfts}
 	Redeem-and-retain NFTs are the future of luxury goods (2022, July 27). Nic Carter
 	\url{https://medium.com/@nic__carter/redeem-and-retain-nfts-are-the-future-of-luxury-goods-760f00dbce23}
-	\bibitem{zooko}
-	Bob Wyman, “The Persistence of Identity (Updating Zooko's Pyramid)” \_As I May Think…\_ 30 Dec 2016. \url{https://web.archive.org/web/20160331154849/https://wyman.us/main/2006/12/the_persistence.html}
-		\bibitem{ipfs}
+
+	\bibitem{verifiablecred}
+	Verifiable Credentials Data Model(VC) https://www.w3.org/TR/2022/REC-vc-data-model-20220303/
+
+	\bibitem{modernapparch}
+	Modern App Architecture for the Enterprise \\
+	\url{https://www.docker.com/wp-content/uploads/2022/03/caaSwhitepaper_V6_0.pdf}
+
+	\bibitem{eth1155}
+	Ethereum ERC-1155 Multi-Token Standard \\ \url{https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/}
+
+	\bibitem{ipfs}
    IPFS, \url{https://docs.ipfs.tech/concepts/what-is-ipfs/#decentralization}
 	
 	
