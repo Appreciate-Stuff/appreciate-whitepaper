@@ -49,10 +49,10 @@ citecolor=gray]{hyperref}
 \title{%
 	\textbf{appreciate} \\
 	\large Digital Ownership Enabled Utility  \\
-	\scriptsize v0.9.1 
+	\scriptsize v0.9.2 
 }
 \author{\scriptsize{ Jeremy McEntire, Moriah Waterland , Kayla Trivieri, Z Braithwaite , Devon Stewart ,  Justin Connor }}
-\date{\normalsize{October 1, 2022}}
+\date{\normalsize{October 18, 2022}}
 
 \begin{document}
 	%\setlength{\parindent}{0pt}
@@ -60,8 +60,7 @@ citecolor=gray]{hyperref}
 	\maketitle
 	
 	
-	
-	\begin{tcolorbox}[colback=gray!5!white,colframe=gray!50!black, boxed title style={empty, size=minimal, bottom=1.5mm}]
+	\begin{tcolorbox}[colback=gray!0!white,colframe=gray!3!white, boxed title style={empty, size=minimal, bottom=1.5mm}]
 		  
 		
 			\abstract{appreciate is building a digital Proof of Ownership ecosystem. Our platform ingests moments of Item purchase, in the form of transaction receipts, and creates Proof of Purchase (PoP) Credentials. PoP Credentials are Verifiable Credentials (VCs) that digitally link Item and Owner using the Owner’s Decentralized Identifier (DiD). PoP Credentials establish the Item’s chain of custody and absorb Item use metadata. These interactions exist as primitives in the appreciate ecosystem, a secure-by-design architecture which iterates on conventional Service Oriented Architecture (SOA) solutions by hosting logic inside a controlled environment rich with data and other constructs. The ecosystem is constructed such that partners can focus on delivering utility services to Owners. Proof of Ownership (POwn), our core primitive, is only required when an Owner requests access to a service. In fact, service providers may embed Proof of Ownership requirements directly in their services. To access services, Owners action a PoP to ‘confirm’ POwn. This confirmation comes in the form of a McEntire Score (M Score): a proprietary assessment of factors to determine appreciate’s confidence in a PoP holder’s possession of the associated Item. PoP and M Score define whether POwn is confirmed or requires more evidence.  As the ecosystem expands, we intend to capture PoP and M Score as on-chain Item Tokens (dynamic NFTs) and to enable commerce denominated in the appreciate fungible token.  appreciate has no consumers or users, only Owners. We look forward to contributing to the Owner Economy.
@@ -98,7 +97,12 @@ Traditional web1/web2 products are rarely able to address all three, creating vu
 appreciate’s design solves this problem using a data transport structure (cryptogram) that optimizes CIA control settings at each point of transit, computation, or storage. 
 The secure-by-design approach facilitates integrations with partners making data available for delivering Owner utility. 
 
-\begin{figure*}[]
+Our approach to security, human-centered design, and interoperability redefines the membrane between all digital and physical items, transforming the ownership experience (See \(Fig.~\ref{fig: flowchart}\)).
+appreciate is the future of Ownership.  
+
+
+
+\begin{figure*}[!htb]
 	\centering %trim=left botm right top
 	%\fbox{
 		\includegraphics[clip, trim=0cm 2cm 0cm 7.5cm, width=0.80\textwidth]{./images/flowchart.pdf}
@@ -106,10 +110,6 @@ The secure-by-design approach facilitates integrations with partners making data
 	\caption{From Receipt Ingestion to Extensible Ownership and Utility  }
 	\label{fig: flowchart}
 \end{figure*}
-
-Our approach to security, human-centered design, and interoperability redefines the membrane between all digital and physical items, transforming the ownership experience (See \(Fig.~\ref{fig: flowchart}.\)).
-appreciate is the future of Ownership.  
-
 
 
 
@@ -124,8 +124,7 @@ Security and privacy considerations influenced the design and development of the
 
 Additionally, the ecosystem is interoperable and extensible. The integration portal allows services to easily and securely connect with our ecosystem without the need for an independent integration team or additional resources. Traditional approaches to integration require onerous integration processes dealing with third-party services, networking, and other constraints. The ecosystem hosts and executes business logic for third parties, providing privileged access to secure information and low-latency interactions. Furthermore, the ecosystem simplifies access to integrated services such as post-purchase experiences, P2P interactions, or blockchain on-ramps. 
 
-
-\begin{figure*}[]
+\begin{figure*}[!htb]
 	\centering %trim=left botm right top
 	%\fbox{
 		\includegraphics[clip, trim=0cm 2cm 0cm 6cm, width=0.80\textwidth]{./images/Ecosystem.pdf}
@@ -184,7 +183,6 @@ appreciate’s ultimate goal is to establish Proof of Ownership -- a concept tha
 
 The Proof of Ownership allows appreciate to convincingly demonstrate that the person who controls the PoP Credential is the same individual who possesses the associated physical Item.  Proof of Ownership is confirmed/denied at the moment a service is requested.  This confirmation is based on the service provider’s requirements.  For example, to offer Item Insurance in the appreciate ecosystem: Insurance Provider A may require a PoP and M Score $>50$ to ‘confirm’ ownership, Insurance Provider B may require a PoP and M Score $>65$ to ‘confirm’ ownership.  
 
-
 \begin{tcolorbox}[colback=gray!5!white,colframe=gray!50!black, title=A case for Proof of Ownership: Item Insurance 
 	]
 	
@@ -194,15 +192,18 @@ The Proof of Ownership allows appreciate to convincingly demonstrate that the pe
 
 In the future, Owners may request an on-chain Item Token to represent their Item.  This Item Token will be minted as a dynamic NFT - representing the Item, but also the M Score of Item-Owner entanglement.  We contemplate that any Item Token may be decoupled from the physical Item.  In the case of this decoupling; the Item Token holder may benefit from digital experiences associated with the Item Token, while the Item Owner may relinquish access to some services requiring digital Proof of Ownership.
 
+See \(Fig.~\ref{fig: poptpoo}\) for Proof of Purchase to Proof of Ownership workflow
 
-\begin{figure*}[b]
+\begin{figure*}[!htb]
 	\centering %trim=left botm right top
 	%\fbox{
 		\includegraphics[clip, trim=0cm 2cm 0cm 6cm, width=0.80\textwidth]{./images/From_Proof_of_Purchase_to_Proof_of_Ownership.pdf}
-	%}
+		%}
 	\caption{From Proof of Purchase to Proof of Ownership }
 	\label{fig: poptpoo}
 \end{figure*}
+
+
 
 
 \section{appreciate Architecture}
@@ -231,9 +232,9 @@ The appreciate ecosystem facilitates sending state updates to the requesting cli
 
 \subsection{Integrity}
 
-The appreciate ecosystem follows the Biba Integrity\cite{biba} model. The simple integrity axiom restricts entities from reading any content created at a lower integrity level and the star integrity axiom restricts any entity from writing to a higher integrity level (See \(Fig.~\ref{bibamod}.\)).
+The appreciate ecosystem follows the Biba Integrity\cite{biba} model. The simple integrity axiom restricts entities from reading any content created at a lower integrity level and the star integrity axiom restricts any entity from writing to a higher integrity level (See \(Fig.~\ref{bibamod}\)).
 
-\begin{figure*}[b]
+\begin{figure*}[!htb]
 	\centering %trim=left botm right top
 	\fbox{
 		\includegraphics[clip, trim=0cm 2cm 0cm 6cm, width=0.80\textwidth]{./images/Biba_Model.pdf}
@@ -248,7 +249,7 @@ Additionally, the ecosystem is interoperable and extensible. The integration por
 The appreciate ecosystem applies some level of restriction to all data elements in accordance with the Clark-Wilson model (See \(Fig.~\ref{fig: clarkwilson} \)). Constrained data Items must have integrity preserved and only allow modification for a transformation procedure. There are two main data classifications, restricted and unrestricted. Within the appreciate ecosystem, all data types are assigned some restriction level. Through applying data type parameters, we are able to lower the probability of fraud and abuse, and increase confidence and trust with our third party services. 
 
 
-\begin{figure*}[b]
+\begin{figure*}[!htb]
 	\centering %trim=left botm right top
 	\fbox{
 		\includegraphics[clip, trim=0cm 2cm 0cm 5cm, width=0.80\textwidth]{./images/Security_model.pdf}
@@ -259,9 +260,9 @@ The appreciate ecosystem applies some level of restriction to all data elements 
 
 
 \subsection{Confidentiality}
-The Bell-LaPadula (BLP)\cite{securecomp}model for data confidentiality restricts any entity from reading anything at any higher data classification than assigned, reversing the read-write conditions espoused by the Biba model. See Fig.~\ref{fig: bella}.  This is the simple security principle of this model. This model also restricts any entity from writing to a lower classification level. The most restrictive invocation of Bell-LaPadula is the strong star principle which restricts any entity from performing read or write functions to any level other than that assigned.
+The Bell-LaPadula (BLP)\cite{securecomp}model for data confidentiality restricts any entity from reading anything at any higher data classification than assigned, reversing the read-write conditions espoused by the Biba model (See Fig.~\ref{fig: bella}).  This is the simple security principle of this model. This model also restricts any entity from writing to a lower classification level. The most restrictive invocation of Bell-LaPadula is the strong star principle which restricts any entity from performing read or write functions to any level other than that assigned.
 
-\begin{figure*}[b]
+\begin{figure*}[!htb]
 	\centering %trim=left botm right top
 	\fbox{
 		\includegraphics[clip, trim=0cm 2cm 0cm 6cm, width=0.80\textwidth]{./images/Bell-LaPadula_Model.pdf}
@@ -290,21 +291,33 @@ To further offload work from development teams, we are also pleased to be able t
 
 Additionally, the appreciate ecosystem’s health and status monitors allow companies to access insights into how an integration is performing and assess whether they are taking advantage of all the data and features available to them. They will also receive alerts when alterations to service interfaces are planned.
 
-\begin{figure*}[b]
+
+For appreciate’s initial set of service providers, see Appendix.~\ref{app: name}. \hfill \break
+For a diagram covering the high level architecture, see Fig.~\ref{fig: app_plat}. \\
+
+\begin{figure*}[!htb]
 	\centering %trim=left botm right top
 	%\fbox{
 		\includegraphics[clip, trim=0cm 2cm 0cm 2cm, width=0.80\textwidth]{./images/Architecture.pdf}
-	%}
+		%}
 	\caption{Appreciate Platform Architechture}
 	\label{fig: app_plat}
 \end{figure*}
-
-For appreciate’s initial set of service providers, see Appendix.~\ref{app: name}.
 
 \subsection{Cryptograms}
 A Cryptogram is a stateful, secure, routable structure that enables end-to-end encrypted communication throughout the appreciate ecosystem. Data is encrypted at the source, passed through the system, and decrypted on-demand by those entities with the appropriate keys. Following the principle of least privilege, decryption is handled for each service by a sidecar which is supplied with only the necessary decryption keys defined by the Service Registry.
 
 Cryptograms allow for mediation between Owners and service providers, while maintaining data sovereignty for both parties.This means that the system, by design, can support services that manage their own encryption. In all cases, the Service Registry shares public keys for encryption. In the typical workflow, the system seeds the appropriate private keys onto a sidecar during service instantiation. Optionally, to support more secure communication to a service, the service owner may supply their own private key in the service logic by encapsulating it in the system image. An Integration API allows external service providers to register, submit, and update an application image and its keys for their implemented service (See Fig.~\ref{fig: infraint}).
+
+\begin{figure*}[!htb]
+	\centering %trim=left botm right top
+	%\fbox{
+		\includegraphics[clip, trim=0cm 2cm 0cm 5cm, width=0.80\textwidth]{./images/Infrasctructure_and_integration.pdf}
+		%}
+	\caption{Infrastructure and Integration}
+	\label{fig: infraint}
+\end{figure*}
+
 
 A Cryptogram is created with a sequence of services that the Owner intends to leverage, as well as with the data required by those services. Both the Cryptogram’s list of services and the data components are encrypted for their intended recipients (e.g., a service, the system’s control plane, or the client).
 
@@ -318,14 +331,6 @@ The Service Registry contains the definition and mapping of interfaces to concre
 An associated Key Vault, an independent system responsible for managing keys within the appreciate ecosystem, contains encrypted copies of the deployment keys for the registered services to enable them to bootstrap without leaking sensitive data. The Service Registry and associated Key Vault will be highly accessible as well as stored on-chain using a distributed filesystem (e.g. Ethereum with IPFS\cite{ipfs}).
 
 
-\begin{figure*}[b]
-	\centering %trim=left botm right top
-	%\fbox{
-		\includegraphics[clip, trim=0cm 2cm 0cm 5cm, width=0.80\textwidth]{./images/Infrasctructure_and_integration.pdf}
-	%}
-	\caption{Infrastructure and Integration}
-	\label{fig: infraint}
-\end{figure*}
 
 
 \subsection{Provisioner}
