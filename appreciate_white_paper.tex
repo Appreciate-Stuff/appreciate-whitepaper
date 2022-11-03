@@ -61,7 +61,7 @@ citecolor=gray]{hyperref}
 	\maketitle
 	
 	
-	\begin{tcolorbox}[colback=gray!0!white,colframe=gray!3!white, boxed title style={empty, size=minimal, bottom=1.5mm}]
+	\begin{tcolorbox}[colback=gray!0!white,colframe=gray!0!white, boxed title style={empty, size=minimal, bottom=1.5mm}]
 		  
 		
 			\abstract{appreciate is building a digital Proof of Ownership ecosystem. Our platform ingests moments of Item purchase, in the form of transaction receipts, and creates Proof of Purchase (PoP) Credentials. PoP Credentials are Verifiable Credentials (VCs) that digitally link Item and Owner using the Owner’s Decentralized Identifier (DiD). PoP Credentials establish the Item’s chain of custody and absorb Item use metadata. These interactions exist as primitives in the appreciate ecosystem, a secure-by-design architecture which iterates on conventional Service Oriented Architecture (SOA) solutions by hosting logic inside a controlled environment rich with data and other constructs. The ecosystem is constructed such that partners can focus on delivering utility services to Owners. Proof of Ownership (POwn), our core primitive, is only required when an Owner requests access to a service. In fact, service providers may embed Proof of Ownership requirements directly in their services. To access services, Owners action a PoP to ‘confirm’ POwn. This confirmation comes in the form of a McEntire Score (M Score): a proprietary assessment of factors to determine appreciate’s confidence in a PoP holder’s possession of the associated Item. PoP and M Score define whether POwn is confirmed or requires more evidence.  As the ecosystem expands, we intend to capture PoP and M Score as on-chain Item Tokens (dynamic NFTs) and to enable commerce denominated in the appreciate fungible token.  appreciate has no consumers or users, only Owners. We look forward to contributing to the Owner Economy.
@@ -96,7 +96,7 @@ Currently, humans do plenty of stuff with stuff: we finance it, insure it, resel
 Yet, this utility is far from seamless, often siloed, and is only a small sample of the utility enabled by Extensible Ownership. 
 
 Empowering Owners in a secured and trusted manner is at the core of our values. The appreciate ecosystem addresses the three fundamental principles in cybersecurity, known as the CIA triad: confidentiality, integrity, and availability. 
-Traditional web1/web2 products are rarely able to address all three, creating vulnerabilities and exposing users to potential risk. 
+Traditional Web1/Web2 products are rarely able to address all three, creating vulnerabilities and exposing users to potential risk. 
 appreciate’s design solves this problem using a data transport structure (cryptogram) that optimizes CIA control settings at each point of transit, computation, or storage. 
 The secure-by-design approach facilitates integrations with partners making data available for delivering Owner utility. 
 
@@ -124,7 +124,6 @@ appreciate is the future of Ownership.
 
 
 Security and privacy considerations influenced the design and development of the ecosystem creating an architecture that is secure by default. End-to-end encrypted communication enables Owner-managed privacy allowing Owners retain control of both the Items in their wallets and their personal data.
-git 
 Additionally, the ecosystem is interoperable and extensible. The integration portal allows services to easily and securely connect with our ecosystem without the need for an independent integration team or additional resources. Traditional approaches to integration require onerous integration processes dealing with third-party services, networking, and other constraints. The ecosystem hosts and executes business logic for third parties, providing privileged access to secure information and low-latency interactions. Furthermore, the ecosystem simplifies access to integrated services such as post-purchase experiences, P2P interactions, or blockchain on-ramps. 
 
 \begin{figure*}[!htb]
@@ -247,23 +246,27 @@ The appreciate ecosystem follows the Biba Integrity\cite{biba} model. The simple
 \end{figure*}
 
 
+
 Additionally, the ecosystem is interoperable and extensible. The integration portal allows services to easily and securely connect with our ecosystem without the need for an independent integration team or additional resources. Traditional approaches to integration require onerous integration processes dealing with third-party services, networking, and other constraints. The ecosystem hosts and executes business logic for third parties, providing privileged access to secure information and low-latency interactions. Furthermore, the ecosystem simplifies access to integrated services such as post-purchase experiences, P2P interactions, or blockchain on-ramps. 
+
+
+
+\begin{figure*}[!htb]
+\centering %trim=left botm right top
+\fbox{
+	\includegraphics[clip, trim=0cm 2cm 0cm 5cm, width=0.80\textwidth]{./images/Security_model.pdf}
+}
+\caption{Clarke Wilson Security Model}
+\label{fig: clarkwilson}
+\end{figure*}
+
 
 The appreciate ecosystem applies some level of restriction to all data elements in accordance with the Clark-Wilson model (See \(Fig.~\ref{fig: clarkwilson} \)). Constrained data Items must have integrity preserved and only allow modification for a transformation procedure. There are two main data classifications, restricted and unrestricted. Within the appreciate ecosystem, all data types are assigned some restriction level. Through applying data type parameters, we are able to lower the probability of fraud and abuse, and increase confidence and trust with our third party services. 
 
 
-\begin{figure*}[!htb]
-	\centering %trim=left botm right top
-	\fbox{
-		\includegraphics[clip, trim=0cm 2cm 0cm 5cm, width=0.80\textwidth]{./images/Security_model.pdf}
-	}
-	\caption{Clarke Wilson Security Model}
-	\label{fig: clarkwilson}
-\end{figure*}
-
-
 \subsection{Confidentiality}
-The Bell-LaPadula (BLP)\cite{securecomp}model for data confidentiality restricts any entity from reading anything at any higher data classification than assigned, reversing the read-write conditions espoused by the Biba model (See Fig.~\ref{fig: bella}).  This is the simple security principle of this model. This model also restricts any entity from writing to a lower classification level. The most restrictive invocation of Bell-LaPadula is the strong star principle which restricts any entity from performing read or write functions to any level other than that assigned.
+The Bell-LaPadula (BLP)\cite{securecomp}model for data confidentiality restricts any entity from reading anything at any higher data classification than assigned, reversing the read-write conditions espoused by the Biba model (See \(Fig.~\ref{fig: bella} \)). 
+ This is the simple security principle of this model. This model also restricts any entity from writing to a lower classification level. The most restrictive invocation of Bell-LaPadula is the strong star principle which restricts any entity from performing read or write functions to any level other than that assigned.
 
 \begin{figure*}[!htb]
 	\centering %trim=left botm right top
@@ -278,6 +281,9 @@ The Bell-LaPadula (BLP)\cite{securecomp}model for data confidentiality restricts
 The appreciate ecosystem has blockchain gateway services that provide additional integrity. These services reside at the boundary of the appreciate ecosystem and facilitate communication between the platform and blockchains. Due to the rapid pace of evolution in blockchain technology, we have elected to keep this coupling loose and contained. This provides flexibility and extensibility in our integrated service offerings by decoupling our dependency from any single blockchain solution.
 
 The specifics required for interoperability with a given blockchain are constrained to a small set of services responsible for communicating between the networks. Following open-source principles and community development, external entities can contribute components or knowledge to construct these gateways for many blockchains, including private ones. 
+
+
+%\newpage
 
 For instance, when a PoP Credential is associated with a high-value Item, we may issue a digital twin as an Item Token\cite{nfts}. The Item Owner may wish to transfer or replicate this token onto a different blockchain for a specific experience. Given that the PoP Credential acts as the record locator and source of truth, the accuracy of the system retains its integrity despite these reflections to external sources of truth.
 
@@ -295,8 +301,8 @@ To further offload work from development teams, we are also pleased to be able t
 Additionally, the appreciate ecosystem’s health and status monitors allow companies to access insights into how an integration is performing and assess whether they are taking advantage of all the data and features available to them. They will also receive alerts when alterations to service interfaces are planned.
 
 
-For appreciate’s initial set of service providers, see Appendix.~\ref{app: name}. \hfill \break
-For a diagram covering the high level architecture, see Fig.~\ref{fig: app_plat}. \\
+For appreciate’s initial set of service providers, see Appendix.~\ref{app: name}. 
+For a diagram covering the high level architecture,  see \(Fig.~\ref{fig: app_plat} \). 
 
 \begin{figure*}[!htb]
 	\centering %trim=left botm right top
@@ -333,9 +339,6 @@ The Service Registry contains the definition and mapping of interfaces to concre
 
 An associated Key Vault, an independent system responsible for managing keys within the appreciate ecosystem, contains encrypted copies of the deployment keys for the registered services to enable them to bootstrap without leaking sensitive data. The Service Registry and associated Key Vault will be highly accessible as well as stored on-chain using a distributed filesystem (e.g. Ethereum with IPFS\cite{ipfs}).
 
-
-
-
 \subsection{Provisioner}
 
 The Provisioner is responsible for initializing services in the ecosystem. The Provisioner is paired 1:1 with a Delegator. When the Delegator requests an interface, the Provisioner will match it to an implementation in the Service Registry. The Provisioner will return an instance of the service to the Delegator.
@@ -343,7 +346,6 @@ The Provisioner is responsible for initializing services in the ecosystem. The P
 The Provisioner maintains a pool of service instances (referred to here simply as “workers”) to enable the system to rapidly scale, meeting active Owners’ demand. All workers are initialized with an expiration date, after which they will be destroyed once they complete any outstanding tasks.
 
 By queuing workers rather than data, the system not only side-steps the issues inherent in handling data-at-rest — like persistence, compliance, and consistency — it also allows the worker pool to “right size” itself through provisioning on-demand and self-destructing on disuse. Additionally, this forced expiry of service workers ensures the active worker pool is relatively fresh with any updated logic, keys, or configurations. 
-
 
 \subsection{Delegator}
 The Delegator controls routing in the appreciate ecosystem. This involves evaluating all incoming Cryptograms, decrypting the routing section, annotating state, and fetching the requested interfaces from the Provisioner.
@@ -362,8 +364,6 @@ Services operate at different privilege levels. Following the principle of least
 
 The \textbf{Appendix A} lists the initial set of ownership service interfaces.
 
-
-
 \section{Future Applications}
 
 appreciate’s Extensible Ownership enables optimal Owner outcomes. By providing validated Proof of Ownership, appreciate facilitates seamless integration of third-party services, thus, lowering the economic barriers to entry (e.g. insurance only existed for high-value Items like engagement rings or luxury watches). Owners are empowered to access the services how they want, when they want, and for the price they want. Our PoP Credentials, M Score, and ecosystem enable third parties to transact with higher confidence in personhood and Item accuracy. Future contemplated applications of our ecosystem include:
@@ -373,6 +373,7 @@ Currently, peer-to-peer marketplaces lack secure and trusted methods for exchang
 
 The appreciate marketplace and M Score informs risk to the future Owner, thus reducing the probability of purchasing fraudulent or defective Items. Additionally, exchange fees and settlement times are reduced as a result of not requiring human or third-party intermediaries in the transaction process. The Owner marketplace fosters a secure and trusted way of exchanging Items within an industry.
 
+\newpage %%%XXX tweaking with space to force page fit XXX%%%
 \textbf{Item Tracking As a Service} \hfill \break
 Accuracy and Ownership of inventory movement through the supply chain is an issue that plagues all industries, old and new. Service providers can now identify the history of all Item data coming in and out of their supply chain. Item Tracking as a service grants the ability to control and manage increasingly complicated networks of manufacturers and suppliers when transparency, speed, agility, quality, and safety are critical. appreciate’s Item Tracking allows for increased precision in datasets and learning models enabling on-demand forecasting for inventory optimization, fulfillment, and reordering.
 
@@ -389,17 +390,18 @@ Currently most NFTs are static and are immutable with fixed metadata. By issuing
 \section{Conclusion}
 appreciate is building the Owner Economy.  Our ecosystem is the optimal framework for Extensible Ownership - enabling Owners to do stuff with their stuff. Owners firmly control their data, digitally claim possession of their Items, and access a rich collection of service integrations. appreciate modernizes ownership in a way that is human meaningful, unifies physical and digital, all with unprecedented decentralization and security.
 
-We are excited to explore the ecosystem’s potential; and ultimately, make a positive impact  for our Owners, our partners, and the planet  ..  Also, fuck receipts
+We are excited to explore the ecosystem’s potential; and ultimately, make a positive impact  for our Owners, our partners, and the planet...  Also, fuck receipts
 
 
 
 \newpage
 \appendix
 \section{Services Appendix} \label{app: name}
-	\begin{tabular}{|p{0.27\textwidth}|p{0.63\textwidth}|}
+ \renewcommand*{\arraystretch}{1.4}
+	\begin{tabular}{|p{0.27\textwidth}|p{0.63\textwidth}|}			
 	\hline
 	\textbf{Ownership Services} & \textbf{Description}\\
-	\hline
+	\hline 
 	Pricing Services   & Owners can save, track, and monitor trends of Items  \\
 	\hline
 	Insurance & Owners can request and obtain approval to insure Items.  
