@@ -7,9 +7,10 @@
 \geometry{
 	letterpaper,
 	total={165.1mm,228.6mm},
-	left=25.4mm,
-	top=25.4mm,
+	left=24mm,
+	top=24mm,
 }
+
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{bm}% bold math
@@ -40,7 +41,7 @@ citecolor=gray]{hyperref}
 \usepackage[font=scriptsize]{caption}
 \usepackage{tikz,lipsum,lmodern}
 \usepackage[most]{tcolorbox}
-
+%%\usepackage{LuaTeX}
 
 \definecolor{mygray}{rgb}{0.90,0.90,0.90}
 \definecolor{darkgray}{rgb}{0.33, 0.33, 0.33}
@@ -49,10 +50,10 @@ citecolor=gray]{hyperref}
 \title{%
 	\textbf{appreciate} \\
 	\large Digital Ownership Enabled Utility  \\
-	\scriptsize v0.9.3
+	\scriptsize v0.9.4
 }
 \author{\scriptsize{ Jeremy McEntire, Moriah Waterland , Kayla Trivieri, Z Braithwaite , Devon Stewart ,  Justin Connor }}
-\date{\normalsize{October 18, 2022}}
+\date{\normalsize{October 31, 2022}}
 
 \begin{document}
 	%\setlength{\parindent}{0pt}
@@ -76,7 +77,6 @@ citecolor=gray]{hyperref}
 	%\doublespacing
 \section {Introduction}
 
-300 billion receipts per year -- humanity tracks our Item transactions through this mess of plastic, paper, and server space.  Each time an Item is transferred to an Owner, we humans generate unnecessary waste (annually 4 billion pounds of $CO_2 $ and 302 million pounds of solid waste\cite{envimp}). In addition to their wastefulness, receipts are analog in a digital world. They don’t enable digital ownership: no chain of custody, and no Item-related utility.
 
 Item related utility, the ability to do stuff with stuff, is a hard problem to solve. Enabling Item related utility requires an ecosystem with the following elements:
 \begin{enumerate}
@@ -121,7 +121,7 @@ appreciate is the future of Ownership.
 
 
 Security and privacy considerations influenced the design and development of the ecosystem creating an architecture that is secure by default. End-to-end encrypted communication enables Owner-managed privacy allowing Owners retain control of both the Items in their wallets and their personal data.
-
+git 
 Additionally, the ecosystem is interoperable and extensible. The integration portal allows services to easily and securely connect with our ecosystem without the need for an independent integration team or additional resources. Traditional approaches to integration require onerous integration processes dealing with third-party services, networking, and other constraints. The ecosystem hosts and executes business logic for third parties, providing privileged access to secure information and low-latency interactions. Furthermore, the ecosystem simplifies access to integrated services such as post-purchase experiences, P2P interactions, or blockchain on-ramps. 
 
 \begin{figure*}[!htb]
@@ -357,7 +357,7 @@ All service instances are instantiated with a configurable Time-To-Live (TTL), i
 
 Services operate at different privilege levels. Following the principle of least privilege, the services owned by appreciate are restricted to the minimal level of access necessary to operate. Trusted partner services are audited to ensure they are also operating at the minimal level of access necessary. Untrusted, Third-Party Services are deployed into a limited-access sandbox, with network access restricted to a limited set of Cryptogram sidecar functionalities and the Delegator, as well as constraints on execution time and CPU/Memory usage.
 
-The \textbf{Appendix} lists the initial set of ownership service interfaces.
+The \textbf{Appendix A} lists the initial set of ownership service interfaces.
 
 
 
@@ -386,7 +386,7 @@ Currently most NFTs are static and are immutable with fixed metadata. By issuing
 \section{Conclusion}
 appreciate is building the Owner Economy.  Our ecosystem is the optimal framework for Extensible Ownership - enabling Owners to do stuff with their stuff. Owners firmly control their data, digitally claim possession of their Items, and access a rich collection of service integrations. appreciate modernizes ownership in a way that is human meaningful, unifies physical and digital, all with unprecedented decentralization and security.
 
-We are excited to explore the ecosystem’s potential; and ultimately, make a positive impact for our Owners, our partners, and the planet.  Also, fuck receipts.
+We are excited to explore the ecosystem’s potential; and ultimately, make a positive impact  for our Owners, our partners, and the planet  ..  Also, fuck receipts
 
 
 
@@ -423,14 +423,20 @@ We are excited to explore the ecosystem’s potential; and ultimately, make a po
 		\hline
 \end{tabular}
 
+\section{Appendix} \label{Misc}
 
-	
+\begin{tcolorbox}[enhanced,fit to height=3cm,
+	colback=gray!2!black!3!white,colframe=green!10!black,title=\textbf{Environmental Benefits},
+	drop fuzzy shadow]
+	300 billion receipts per year -- humanity tracks our Item transactions through this mess of plastic, paper, and server space.  Each time an Item is transferred to an Owner, we humans generate unnecessary waste (annually 4 billion pounds of $CO_2 $ and 302 million pounds of solid waste\cite{envimp}). In addition to their wastefulness, receipts are analog in a digital world. They don’t enable digital ownership: no chain of custody, and no Item-related utility.
+
+\end{tcolorbox}
+
+\newpage
 \begin{thebibliography}{9}
 	 
 	\bibitem{envimp}
 	Environmental Impact of Receipts https://www.greenamerica.org/sites/default/files/2019-06/Green America’s Skip The Slip Report.pdf 
-	
-
 	
 	\bibitem{zooko}
 	Bob Wyman, “The Persistence of Identity (Updating Zooko's Pyramid)” \_As I May Think…\_ 30 Dec 2016. \url{https://web.archive.org/web/20160331154849/https://wyman.us/main/2006/12/the_persistence.html}	
@@ -458,6 +464,7 @@ We are excited to explore the ecosystem’s potential; and ultimately, make a po
 	\bibitem{ipfs}
    IPFS, \url{https://docs.ipfs.tech/concepts/what-is-ipfs/#decentralization}
 	
+
 	
 \end{thebibliography}
 	
