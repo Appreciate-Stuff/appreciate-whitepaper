@@ -1,5 +1,6 @@
 ![logo](https://github.com/Appreciate-Stuff/appreciate-whitepaper/blob/master/images/appreciate-logo-black.png)
 
+<br />
 # [appreciate whitepaper](https://github.com/Appreciate-Stuff/appreciate-whitepaper/blob/master/appreciate_white_paper.pdf)
 
 
@@ -9,4 +10,4 @@ By established Proof of Ownership for a person and their item, item based utilit
 
 The appreciate team and its technology is turning infrastructures into ecosystems, items into assets, consumers into owners.
 
-The appreciate team and its technology is turning infrastructures into ecosystems, items into assets, consumers into owners. Get in touch with our team by emailing us at *feedback@appreciate.it* or visit us at [appreciate.it](appreciate.it).
+The appreciate team and its technology is turning infrastructures into ecosystems, items into assets, consumers into owners. Get in touch with our team by emailing us at *feedback@appreciate.it* or visit us at [appreciate.it](https://www.appreciate.it).
