@@ -1,6 +1,5 @@
 ![logo](https://github.com/Appreciate-Stuff/appreciate-whitepaper/blob/master/images/appreciate-logo-black.png)
 
-<br />
 # [appreciate whitepaper](https://github.com/Appreciate-Stuff/appreciate-whitepaper/blob/master/appreciate_white_paper.pdf)
 
 
