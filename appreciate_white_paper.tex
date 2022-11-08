@@ -50,9 +50,9 @@ citecolor=gray]{hyperref}
 \title{%
 	\textbf{appreciate} \\
 	\large Digital Ownership Enabled Utility  \\
-	\scriptsize v0.9.6
+	\scriptsize v0.9.7
 }
-\author{\scriptsize{ Jeremy McEntire, Moriah Waterland , Kayla Trivieri, Z Braithwaite , Devon Stewart ,  Allys Ton, Justin Connor }}
+\author{\scriptsize{ Jeremy McEntire, Moriah Waterland, Kayla Trivieri, Z Braithwaite, Devon Stewart,  Allys Ton, Justin Connor }}
 \date{\normalsize{October 31, 2022}}
 
 \begin{document}
@@ -317,7 +317,7 @@ For a diagram covering the high level architecture,  see \(Fig.~\ref{fig: app_pl
 \subsection{Cryptograms}
 A Cryptogram is a stateful, secure, routable structure that enables end-to-end encrypted communication throughout the appreciate ecosystem. Data is encrypted at the source, passed through the system, and decrypted on-demand by those entities with the appropriate keys. Following the principle of least privilege, decryption is handled for each service by a sidecar which is supplied with only the necessary decryption keys defined by the Service Registry.
 
-Cryptograms allow for mediation between Owners and service providers, while maintaining data sovereignty for both parties.This means that the system, by design, can support services that manage their own encryption. In all cases, the Service Registry shares public keys for encryption. In the typical workflow, the system seeds the appropriate private keys onto a sidecar during service instantiation. Optionally, to support more secure communication to a service, the service owner may supply their own private key in the service logic by encapsulating it in the system image. An Integration API allows external service providers to register, submit, and update an application image and its keys for their implemented service (See Fig.~\ref{fig: infraint}).
+Cryptograms allow for mediation between Owners and service providers, while maintaining data sovereignty for both parties.This means that the system, by design, can support services that manage their own encryption. In all cases, the Service Registry shares public keys for encryption. In the typical workflow, the system seeds the appropriate private keys onto a sidecar during service instantiation. Optionally, to support more secure communication to a service, the service owner may supply their own private key in the service logic by encapsulating it in the system image. An Integration API allows external service providers to register, submit, and update an application image and its keys for their implemented service (See \(Fig.~\ref{fig: infraint}\)).
 
 \begin{figure*}[!htb]
 	\centering %trim=left botm right top
